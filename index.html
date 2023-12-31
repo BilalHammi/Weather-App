@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Weather App</title>
 </head>
 
 <body>
     <div id="app">
         <form @submit.prevent="onSubmit">
-            <input type="text" id="City" v-model="City">
-            <input class="button" type="submit" value="Submit" />
+            <div class="flex justify-center mt-20">
+                <input type="text" id="City" v-model="City" class="border-2 border-black w-56 rounded-lg py-2">
+                <input class="border-2 border-black ml-3 px-3 bg-gray-300 font-bold rounded-lg" type="submit" value="Submit" />
+            </div>
         </form>
-        <api-call></api-call>
+        <h1 v-if="City">{{ apiData }}</h1>
     </div>
     <!-- Import App -->
     <script src="./main.js"></script>
-    <script src="./api_calling.js"></script>
-
     <!-- Mount App -->
     <script>
         const mountedApp = app.mount('#app');
