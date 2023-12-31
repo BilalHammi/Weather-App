@@ -25,6 +25,6 @@ app.component('api-call', {
     template:
     /*html*/
         `<div>
-    <h1> {{ apiData }}</h1>
-    </div>`
+            <h1> {{ apiData }}</h1>
+        </div>`
 })

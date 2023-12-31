@@ -1,6 +1,12 @@
 const app = Vue.createApp({
     data() {
-        return {}
+        return {
+            City: ''
+        }
     },
-    methods: {},
+    methods: {
+        onSubmit() {
+            console.log(this.City);
+        }
+    },
 })

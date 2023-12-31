@@ -10,6 +10,10 @@
 
 <body>
     <div id="app">
+        <form @submit.prevent="onSubmit">
+            <input type="text" id="City" v-model="City">
+            <input class="button" type="submit" value="Submit" />
+        </form>
         <api-call></api-call>
     </div>
     <!-- Import App -->
