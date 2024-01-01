@@ -5,13 +5,14 @@ const app = Vue.createApp({
 
         return {
             City: null,
-            apiData: null,
+            Country_name: null,
+            Average_temp: null,
+            Icon_id: null,
         }
     },
     methods: {
         onSubmit() {
             City = this.City;
-            let APIid = '&appid=ef63fae71b11f8ef4dd1fd8a5b7a5c87';
             console.log(apiLink + `${City}&appid=ef63fae71b11f8ef4dd1fd8a5b7a5c87`);
             // API call when the component is mounted
             fetch(apiLink + `${City}&appid=ef63fae71b11f8ef4dd1fd8a5b7a5c87`)
@@ -23,6 +24,7 @@ const app = Vue.createApp({
                 })
                 .then(data => {
                     // Handle the fetched data here
+                    console.log(data.sys.country);
                     console.log(data);
                 })
                 .catch(error => {
