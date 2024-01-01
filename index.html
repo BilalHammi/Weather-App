@@ -13,11 +13,11 @@
     <div id="app">
         <form @submit.prevent="onSubmit">
             <div class="flex justify-center mt-20">
-                <input type="text" id="City" v-model="City" class="border-2 border-black w-56 rounded-lg py-2">
+                <input type="text" id="City" v-model="City" class="border-2 border-black w-56 rounded-lg py-2 text-center">
                 <input class="border-2 border-black ml-3 px-3 bg-gray-300 font-bold rounded-lg" type="submit" value="Submit" />
             </div>
         </form>
-        <h1 v-if="City">{{ apiData }}</h1>
+
     </div>
     <!-- Import App -->
     <script src="./main.js"></script>
