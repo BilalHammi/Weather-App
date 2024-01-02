@@ -1,5 +1,4 @@
 let apiLink = 'http://api.openweathermap.org/data/2.5/weather?units=metric&q=';
-let arrayStad = [];
 const app = Vue.createApp({
     data() {
 
@@ -7,13 +6,12 @@ const app = Vue.createApp({
             City: null,
             Country_name: null,
             Average_temp: null,
-            Icon_id: null,
+            midImg: null,
         }
     },
     methods: {
         onSubmit() {
             City = this.City;
-            console.log(apiLink + `${City}&appid=ef63fae71b11f8ef4dd1fd8a5b7a5c87`);
             // API call when the component is mounted
             fetch(apiLink + `${City}&appid=ef63fae71b11f8ef4dd1fd8a5b7a5c87`)
                 .then(response => {
@@ -24,7 +22,9 @@ const app = Vue.createApp({
                 })
                 .then(data => {
                     // Handle the fetched data here
-                    console.log(data.sys.country);
+                    console.log(this.Country_name = data.sys.country + ",");
+                    console.log(this.midImg = data.weather[0].icon);
+                    console.log(`https://openweathermap.org/img/wn/${this.midImg}@2x.png`);
                     console.log(data);
                 })
                 .catch(error => {
