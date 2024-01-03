@@ -13,12 +13,13 @@
     <div id="app">
         <form @submit.prevent="onSubmit">
             <div class="flex justify-center mt-20">
-                <input type="text" id="City" v-model="City" class="border-2 border-black w-56 rounded-lg py-2 text-center font-bold">
+                <input type="text" id="City" v-model="City" class="border-2 border-black w-56 rounded-lg py-2 text-center font-bold" required>
                 <input class="border-2 border-black ml-3 px-3 bg-gray-300 font-bold rounded-lg" type="submit" value="Submit" />
             </div>
         </form>
-        <div v-if="counter" class="rounded-lg bg-linear h-64 w-80 flex justify-center">
+        <div v-if="counter" class="rounded-lg bg-linear h-64 w-80 flex justify-center bg-gradient-to-tl from-cyan-500 via-green-400 to-blue-500">
             <div class="pt-3">
+                <h1 class="font-bold text-2xl"> {{ current_day }}</h1>
                 <img v-bind:src="'https://openweathermap.org/img/wn/' + midImg + '@2x.png'">
                 <h1 class="font-bold text-4xl">{{ Average_temp }}</h1>
                 <div class="flex flex-row font-bold text-xl">
