@@ -17,15 +17,15 @@
                 <input class="border-2 border-black ml-3 px-3 bg-gray-300 font-bold rounded-lg" type="submit" value="Submit" />
             </div>
         </form>
-        <div v-if="counter" class="rounded-lg bg-gray-500 h-64 w-80 flex justify-center">
+        <div v-if="counter" class="rounded-lg bg-linear h-64 w-80 flex justify-center">
             <div class="pt-3">
                 <img v-bind:src="'https://openweathermap.org/img/wn/' + midImg + '@2x.png'">
                 <h1 class="font-bold text-4xl">{{ Average_temp }}</h1>
                 <div class="flex flex-row font-bold text-xl">
                     <h6>{{ Country_name }}</h6>
                     <h6>{{ City }}</h6>
-
                 </div>
+                <h6 class="font-bold">Wind speed: {{ cloud_speed }}</h6>
             </div>
         </div>
     </div>
