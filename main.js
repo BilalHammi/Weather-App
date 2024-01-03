@@ -3,6 +3,7 @@ const app = Vue.createApp({
     data() {
 
         return {
+            counter: null,
             City: null,
             Country_name: null,
             Average_temp: null,
@@ -12,6 +13,12 @@ const app = Vue.createApp({
     methods: {
         onSubmit() {
             City = this.City;
+
+            if (City.length > 0) {
+                console.log(this.counter += 1);
+            } else {
+                console.log(this.counter = null);
+            }
             // API call when the component is mounted
             fetch(apiLink + `${City}&appid=ef63fae71b11f8ef4dd1fd8a5b7a5c87`)
                 .then(response => {
@@ -25,7 +32,7 @@ const app = Vue.createApp({
                     console.log(this.Country_name = data.sys.country + ",");
                     console.log(this.midImg = data.weather[0].icon);
                     console.log(`https://openweathermap.org/img/wn/${this.midImg}@2x.png`);
-                    console.log(data);
+                    console.log(this.Average_temp = data.main.temp + "°C");
                 })
                 .catch(error => {
                     // Handle errors
