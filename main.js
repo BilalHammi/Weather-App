@@ -43,6 +43,10 @@ const app = Vue.createApp({
             }
             console.log(dayToday);
         },
+
+        weatherFunction(weatherId) {
+            console.log(weatherId);
+        },
         onSubmit() {
             City = this.City;
 
@@ -66,12 +70,14 @@ const app = Vue.createApp({
                     console.log(`https://openweathermap.org/img/wn/${this.midImg}@2x.png`);
                     console.log(this.Average_temp = data.main.temp + "°C");
                     console.log(this.cloud_speed = data.wind.speed);
+                    this.weatherFunction(data.weather[0].id);
                 })
                 .catch(error => {
                     // Handle errors
                     console.error('There was a problem with the fetch operation:', error);
                 });
             this.DateFunction();
+
             console.log(City);
         }
 
