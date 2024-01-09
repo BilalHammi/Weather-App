@@ -32,7 +32,7 @@
       </div>
     </div>
   </div>
-  <weather-styling :weatherId="weatherId"></weather-styling>
+  <weather-styling :weatherId="weatherId" :midImg="midImg"></weather-styling>
 </template>
 <script>
 
