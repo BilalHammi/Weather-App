@@ -58,12 +58,44 @@ export default {
   },
   methods: {
     DateFunction() {
-      // ... (your existing DateFunction code)
+      let dayToday = newDate.getDay();
+      switch (dayToday) {
+        case 1:
+          console.log("Day 1");
+          this.current_day = "Monday";
+          break;
+        case 2:
+          console.log("Day 2");
+          this.current_day = "Tuesday";
+          break;
+        case 3:
+          console.log("Day 3");
+          this.current_day = "Wensday";
+          break;
+        case 4:
+          console.log("Day 4");
+          this.current_day = "Thursday";
+          break;
+        case 5:
+          console.log("Day 5");
+          this.current_day = "Friday";
+          break;
+        case 6:
+          console.log("Day 6");
+          this.current_day = "Saturday";
+          break;
+        case 7:
+          console.log("Day 7");
+          this.current_day = "Sunday";
+          break;
+        default:
+          break;
+      }
     },
     onSubmit() {
-      this.City = this.City.trim(); // Trim any leading/trailing spaces
+      this.City = this.City.trim();
       if (this.City.length > 0) {
-        this.counter += 1; // Increment the counter
+        this.counter += 1;
         fetch(apiLink + `${this.City}&appid=ef63fae71b11f8ef4dd1fd8a5b7a5c87`)
           .then(response => {
             if (!response.ok) {
