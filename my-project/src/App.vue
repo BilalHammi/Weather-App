@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div class="absolute left-[49.5rem] z-50 flex justify-center mt-10 bottom-96">
+      <div class="absolute left-[49.5rem] z-50 mt-10 bottom-96">
         <div
           class="flex justify-center rounded-lg bg-linear h-72 w-80 bg-gradient-to-tl from-cyan-500 via-green-400 to-blue-500 items-center">
           <div class="pt-3">
@@ -116,7 +116,6 @@ export default {
         this.DateFunction();
       } else {
         this.counter = null;
-        // Handle if the City field is empty
       }
     }
   }

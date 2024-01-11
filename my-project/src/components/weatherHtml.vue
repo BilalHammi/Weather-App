@@ -42,13 +42,13 @@
         <div class="flex flex-col-reverse mt-5 mr-24">
           <img src="../assets/clouds.png" class="absolute z-40">
           <div class="flex flex-row ml-12 mt-48">
-            <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-10">
+            <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
           </div>
         </div>
         <div class="flex flex-col-reverse mt-5">
           <img src="../assets/clouds.png" class="absolute z-40">
           <div class="flex flex-row ml-12 mt-48">
-            <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-10">
+            <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
   </div>
   <!-- snow  -->
   <!-- Regen  -->
-  <div v-else="weatherId > 500 && 533 > weatherId" class="z-50 absolute bg-red-500 w-96 h-96">
+  <div v-else-if="weatherId > 500 && 533 > weatherId" class="z-50 absolute bg-red-500 w-96 h-96">
     <h1>Weather ID: {{ weatherId }}</h1>
     <section class="h-screen w-screen bg-red-400">
       <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="">
@@ -103,7 +103,7 @@
     <!-- Any other content related to WeatherStyling -->
   </div>
   <!-- Regen  -->
-  <div v-else="weatherId == 800" cl ass="overflow-hidden">
+  <div v-else-if="weatherId == 800" class="overflow-hidden">
     <section class="h-screen w-screen bg-blue-400 absolute top-0 z-10 overflow-hidden">
       <div class="w-full flex justify-center">
         <img :src="'https://openweathermap.org/img/wn/' + midImg + '@4x.png'" alt="" class="mt-2">
