@@ -48,7 +48,7 @@
                 </div>
               </div>
               <div class="flex flex-col-reverse mt-5">
-                <img src="../assets/clouds.png" class="absolute z-40">
+                <img src="../assets/clouds.png" class="absolute z-40 mr-10">
                 <div class="flex flex-row ml-4 mt-48">
                   <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
                   <div class="absolute bottom-0 flex flex-row ml-12"> 
@@ -58,16 +58,22 @@
               </div>
             </div>
             <div class="flex flex-row absolute top-0 right-28">
-              <div class="flex flex-col-reverse mt-5 mr-24">
-                <img src="../assets/clouds.png" class="absolute z-40">
-                <div class="flex flex-row ml-12 mt-48">
-                  <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
-                </div>
-              </div>
               <div class="flex flex-col-reverse mt-5">
                 <img src="../assets/clouds.png" class="absolute z-40">
-                <div class="flex flex-row ml-12 mt-48">
-                  <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
+                <div class="flex flex-row ml-4 mt-48">
+                  <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
+                  <div class="absolute bottom-0 flex flex-row ml-12"> 
+                    <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col-reverse mt-5 ml-28">
+                <img src="../assets/clouds.png" class="absolute z-40">
+                <div class="flex flex-row ml-4 mt-48">
+                  <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
+                  <div class="absolute bottom-0 flex flex-row ml-12"> 
+                    <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
+                  </div>
                 </div>
               </div>
             </div>
