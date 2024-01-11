@@ -34,87 +34,90 @@
     </section>
   </div>
   <!-- Thunderstorm -->
-        <!-- drizzle  -->
-      <div v-else-if="weatherId >= 801 && 805 > weatherId" class="overflow-hidden">
-        <section class="h-screen w-screen bg-blue-800 absolute top-0 z-10 overflow-hidden">
-            <div class="flex flex-row absolute top-0">
-              <div class="flex flex-col-reverse mt-5 mr-24">
-                <img src="../assets/clouds.png" class="absolute z-40 ml-6">
-                <div class="flex flex-row ml-12 mt-48">
-                  <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
-                  <div class="absolute bottom-0 flex flex-row ml-12"> 
-                    <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col-reverse mt-5">
-                <img src="../assets/clouds.png" class="absolute z-40 mr-10">
-                <div class="flex flex-row ml-4 mt-48">
-                  <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
-                  <div class="absolute bottom-0 flex flex-row ml-12"> 
-                    <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-row absolute top-0 right-28">
-              <div class="flex flex-col-reverse mt-5">
-                <img src="../assets/clouds.png" class="absolute z-40">
-                <div class="flex flex-row ml-4 mt-48">
-                  <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
-                  <div class="absolute bottom-0 flex flex-row ml-12"> 
-                    <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col-reverse mt-5 ml-28">
-                <img src="../assets/clouds.png" class="absolute z-40">
-                <div class="flex flex-row ml-4 mt-48">
-                  <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
-                  <div class="absolute bottom-0 flex flex-row ml-12"> 
-                    <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <section class="w-screen bg-green-600 h-40 absolute bottom-0"></section>
-          </section>
-        </div>
-        <!-- drizzle  -->
-        <div v-else-if="weatherId >= 500 && 532 > weatherId" class="overflow-hidden">
-          <section class="h-screen w-screen bg-blue-800 absolute top-0 z-10 overflow-hidden">
-            <div class="flex flex-row absolute top-0">
-          <div class="flex flex-col-reverse mt-5 mr-24">
-            <img src="../assets/clouds.png" class="absolute z-40">
-            <div class="flex flex-row ml-12 mt-48">
-              <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
-            </div>
-          </div>
-          <div class="flex flex-col-reverse mt-5">
-            <img src="../assets/clouds.png" class="absolute z-40">
-            <div class="flex flex-row ml-12 mt-48">
-              <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
+  <!-- drizzle  -->
+  <div v-else-if="weatherId >= 300 && 322 > weatherId" class="overflow-hidden">
+    <section class="h-screen w-screen bg-blue-800 absolute top-0 z-10 overflow-hidden">
+      <div class="flex flex-row absolute top-0">
+        <div class="flex flex-col-reverse mt-5 mr-24">
+          <img src="../assets/clouds.png" class="absolute z-40 ml-6">
+          <div class="flex flex-row ml-12 mt-48">
+            <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
+            <div class="absolute bottom-0 flex flex-row ml-12">
+              <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
             </div>
           </div>
         </div>
-            <div class="flex flex-row absolute top-0 right-28">
-            <div class="flex flex-col-reverse mt-5 mr-24">
-              <img src="../assets/clouds.png" class="absolute z-40">
-              <div class="flex flex-row ml-12 mt-48">
-                <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
-              </div>
-            </div>
-            <div class="flex flex-col-reverse mt-5">
-              <img src="../assets/clouds.png" class="absolute z-40">
-              <div class="flex flex-row ml-12 mt-48">
-                <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
-              </div>
+        <div class="flex flex-col-reverse mt-5">
+          <img src="../assets/clouds.png" class="absolute z-40 mr-10">
+          <div class="flex flex-row ml-4 mt-48">
+            <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
+            <div class="absolute bottom-0 flex flex-row ml-12">
+              <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
             </div>
           </div>
-          <section class="w-screen bg-green-600 h-40 absolute bottom-0"></section>
-          </section>
+        </div>
+      </div>
+      <div class="flex flex-row absolute top-0 right-28">
+        <div class="flex flex-col-reverse mt-5">
+          <img src="../assets/clouds.png" class="absolute z-40">
+          <div class="flex flex-row ml-4 mt-48">
+            <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
+            <div class="absolute bottom-0 flex flex-row ml-12">
+              <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col-reverse mt-5 ml-28">
+          <img src="../assets/clouds.png" class="absolute z-40">
+          <div class="flex flex-row ml-4 mt-48">
+            <img v-for="index in 4" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-12">
+            <div class="absolute bottom-0 flex flex-row ml-12">
+              <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="mx-4">
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="w-screen bg-green-600 h-40 absolute bottom-0"></section>
+    </section>
   </div>
   <!-- drizzle  -->
+  <!-- Rain  -->
+
+  <div v-else-if="weatherId >= 500 && 532 > weatherId" class="overflow-hidden">
+    <section class="h-screen w-screen bg-blue-800 absolute top-0 z-10 overflow-hidden">
+      <div class="flex flex-row absolute top-0">
+        <div class="flex flex-col-reverse mt-5 mr-24">
+          <img src="../assets/clouds.png" class="absolute z-40">
+          <div class="flex flex-row ml-12 mt-48">
+            <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
+          </div>
+        </div>
+        <div class="flex flex-col-reverse mt-5">
+          <img src="../assets/clouds.png" class="absolute z-40">
+          <div class="flex flex-row ml-12 mt-48">
+            <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row absolute top-0 right-28">
+        <div class="flex flex-col-reverse mt-5 mr-24">
+          <img src="../assets/clouds.png" class="absolute z-40">
+          <div class="flex flex-row ml-12 mt-48">
+            <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
+          </div>
+        </div>
+        <div class="flex flex-col-reverse mt-5">
+          <img src="../assets/clouds.png" class="absolute z-40">
+          <div class="flex flex-row ml-12 mt-48">
+            <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="" class="ml-7 mb-11">
+          </div>
+        </div>
+      </div>
+      <section class="w-screen bg-green-600 h-40 absolute bottom-0"></section>
+    </section>
+  </div>
+  <!-- Rain  -->
+
   <!-- clear  -->
   <div v-else-if="weatherId >= 801 && 805 > weatherId" class="overflow-hidden">
     <section class="h-screen w-screen bg-blue-400 absolute top-0 z-10 overflow-hidden">
@@ -147,7 +150,6 @@
     <h1>Weather ID: {{ weatherId }}</h1>
     <section class="h-screen w-screen bg-blue-400"></section>
     <section class="w-screen bg-green-600 h-40"></section>
-    <!-- Any other content related to WeatherStyling -->
   </div>
   <!-- snow  -->
   <!-- Regen  -->

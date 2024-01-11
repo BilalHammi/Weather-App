@@ -1,8 +1,8 @@
 <template>
   <div class="h-screen overflow-hidden">
-    <div class="">
+    <div class="flex justify-center">
       <div>
-        <div class="flex justify-center ">
+        <div class="">
           <form @submit.prevent="onSubmit" class="relative z-50 bottom-52">
             <div class="mt-96">
               <input type="text" id="City" v-model="City"
@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div v-if="counter" class="absolute left-[49.5rem] z-50 mt-10 bottom-96">
+      <div v-if="counter" class="absolute z-50 mt-10 bottom-96">
         <div
           class="flex justify-center rounded-lg bg-linear h-72 w-80 bg-gradient-to-tl from-cyan-500 via-green-400 to-blue-500 items-center">
           <div class="pt-3">
