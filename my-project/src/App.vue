@@ -20,7 +20,7 @@
           class="flex justify-center rounded-lg bg-linear h-72 w-80 bg-gradient-to-tl from-cyan-500 via-green-400 to-blue-500 items-center">
           <div class="pt-3">
             <h1 class="font-bold text-2xl"> {{ current_day }}</h1>
-            <img v-bind:src="'https://openweathermap.org/img/wn/' + midImg + '@2x.png'">
+            <img v-bind:src="'https://openweathermap.org/img/wn/' + midImg + '@2x.png'" class="w-full flex justify-center">
             <h1 class="font-bold text-4xl">{{ Average_temp }}</h1>
             <div class="flex flex-row font-bold text-xl">
               <h6>{{ Country_name }}, </h6>
