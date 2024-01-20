@@ -17,7 +17,7 @@
 
       <div v-if="counter" class="absolute z-50 mt-10 bottom-96">
         <div
-          class="flex justify-center rounded-lg bg-linear h-72 w-80 bg-gradient-to-tl from-cyan-500 via-green-400 to-blue-500 items-center">
+          class="flex justify-center rounded-lg bg-gray-500 h-72 w-80">
           <div class="pt-3">
             <h1 class="font-bold text-2xl"> {{ current_day }}</h1>
             <img v-bind:src="'https://openweathermap.org/img/wn/' + midImg + '@2x.png'" class="w-full flex justify-center">
@@ -26,7 +26,7 @@
               <h6>{{ Country_name }}, </h6>
               <h6> {{ City }}</h6>
             </div>
-            <h6 class="font-bold">Wind speed: {{ cloud_speed }}</h6>
+            <h6 class="font-bold mb-8">Wind speed: {{ cloud_speed }} km/hour</h6>
           </div>
         </div>
       </div>
@@ -53,13 +53,13 @@ export default {
       Average_temp: null,
       cloud_speed: null,
       midImg: null,
-      weatherId: null
+      weatherId: null,
     }
   },
   methods: {
     DateFunction() {
-      let dayToday = newDate.getDay();
-      switch (dayToday) {
+      let dayToday = new Date
+      switch (dayToday.getDay()) {
         case 1:
           console.log("Day 1");
           this.current_day = "Monday";
@@ -107,13 +107,14 @@ export default {
             this.Country_name = data.sys.country;
             this.midImg = data.weather[0].icon;
             this.Average_temp = data.main.temp + "°C";
-            this.cloud_speed = data.wind.speed;
+            this.cloud_speed = Math.floor(data.wind.speed) * 3.6;
             this.weatherId = data.weather[0].id;
+            console.log(data);
           })
           .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
           });
-        this.DateFunction();
+        console.log(this.DateFunction());
       } else {
         this.counter = null;
       }
