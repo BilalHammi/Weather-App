@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <section class="w-screen bg-green-600 h-40 absolute bottom-0 z-10"></section>
+      <section class="w-screen bg-green-600 h-24 absolute bottom-0 z-10"></section>
     </section>
   </div>
   <!-- Thunderstorm -->
@@ -77,7 +77,7 @@
           </div>
         </div>
       </div>
-      <section class="w-screen bg-green-600 h-40 absolute bottom-0"></section>
+      <section class="w-screen bg-green-600 h-24 absolute bottom-0"></section>
     </section>
   </div>
   <!-- drizzle  -->
@@ -113,7 +113,7 @@
           </div>
         </div>
       </div>
-      <section class="w-screen bg-green-600 h-40 absolute bottom-0"></section>
+      <section class="w-screen bg-green-600 h-24 absolute bottom-0"></section>
     </section>
   </div>
   <!-- Rain  -->
@@ -138,7 +138,7 @@
           <img src="../assets/clouds.png" class="z-40">
         </div>
       </div>
-      <section class="w-screen bg-green-600 h-40 absolute bottom-0 z-10"></section>
+      <section class="w-screen bg-green-600 h-24 absolute bottom-0 z-10"></section>
     </section>
   </div>
   <!-- clear  -->
@@ -176,7 +176,7 @@
           </div>
         </div>
       </div>
-      <section class="w-screen bg-green-600 h-40 absolute bottom-0 z-10"></section>
+      <section class="w-screen bg-green-600 h-24 absolute bottom-0 z-10"></section>
     </section>
   </div>
   <!-- snow  -->
@@ -185,21 +185,21 @@
     <section class="h-screen w-screen bg-red-400">
       <img v-for="index in 3" :key="index" src="../assets/water_drop.png" alt="">
     </section>
-    <section class="w-screen bg-green-600 h-40"></section>
+    <section class="w-screen bg-green-600 h-24"></section>
     <!-- Any other content related to WeatherStyling -->
   </div>
   <!-- Regen  -->
   <div v-else-if="weatherId == 800" class="overflow-hidden">
     <section class="h-screen w-screen bg-blue-400 absolute top-0 z-10 overflow-hidden">
       <div class="w-full flex justify-center">
-        <img :src="'https://openweathermap.org/img/wn/' + midImg + '@4x.png'" alt="" class="mt-2">
+        <img :src="'https://openweathermap.org/img/wn/' + midImg + '@4x.png'" alt="" class="relative bottom-6">
       </div>
-      <section class="w-screen bg-green-600 h-40 absolute bottom-0 z-10"></section>
+      <section class="w-screen bg-green-600 h-24 absolute bottom-0 z-10"></section>
     </section>
   </div>
   <div v-else="" class="overflow-hidden">
     <section class="h-screen w-screen bg-blue-400 absolute top-0 z-10 overflow-hidden">
-      <section class="w-screen bg-green-600 h-40 absolute bottom-0 z-10"></section>
+      <section class="w-screen bg-green-600 h-24 absolute bottom-0 z-10"></section>
     </section>
   </div>
 </template>

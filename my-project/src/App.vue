@@ -6,7 +6,7 @@
           <form @submit.prevent="onSubmit" class="relative z-50 bottom-52">
             <div class="mt-96">
               <input type="text" id="City" v-model="City"
-                class="border-2 border-black w-56 rounded-lg py-2 text-center font-bold" required>
+                class="border-2 border-black rounded-lg py-2 text-center font-bold max-[]:flex-1" required>
               <input
                 class="border-2 border-black ml-3 px-3 py-2 hover:bg-black hover:text-white bg-gray-300 font-bold rounded-lg"
                 type="submit" value="Submit" />
@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div v-if="counter" class="flex justify-center z-50 mt-10">
+      <div v-if="counter" class="flex justify-center z-50 absolute mt-96 ml-5">
         <div class="flex justify-center rounded-lg bg-gray-500 h-72 w-80 max-2xl:h-56 max-2xl:w-60 max-2xl:justify-start">
           <div class="pt-3">
             <h1 class="font-bold text-2xl fixed xl:text-xl"> {{ current_day }}</h1>
