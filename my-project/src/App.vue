@@ -1,6 +1,6 @@
 <template>
-  <div class="h-screen overflow-hidden">
-    <div class="flex justify-center">
+  <div class="h-screen overflow-hidden flex justify-center">
+    <div class="flex flex-col">
       <div>
         <div class="">
           <form @submit.prevent="onSubmit" class="relative z-50 bottom-52">
@@ -15,18 +15,22 @@
         </div>
       </div>
 
-      <div v-if="counter" class="absolute z-50 mt-10 bottom-96">
-        <div
-          class="flex justify-center rounded-lg bg-gray-500 h-72 w-80">
+      <div v-if="counter" class="flex justify-center z-50 mt-10">
+        <div class="flex justify-center rounded-lg bg-gray-500 h-72 w-80 max-2xl:h-56 max-2xl:w-60 max-2xl:justify-start">
           <div class="pt-3">
-            <h1 class="font-bold text-2xl"> {{ current_day }}</h1>
-            <img v-bind:src="'https://openweathermap.org/img/wn/' + midImg + '@2x.png'" class="w-full flex justify-center">
-            <h1 class="font-bold text-4xl">{{ Average_temp }}</h1>
-            <div class="flex flex-row font-bold text-xl">
-              <h6>{{ Country_name }}, </h6>
-              <h6> {{ City }}</h6>
+            <h1 class="font-bold text-2xl fixed xl:text-xl"> {{ current_day }}</h1>
+            <img v-bind:src="'https://openweathermap.org/img/wn/' + midImg + '@2x.png'"
+              class="max-2xl:ml-14 h-40 max-2xl:h-28">
+            <div class="">
+              <h1 class="font-bold text-4xl xl:text-2xl max-2xl:flex max-2xl:justify-center">{{ Average_temp }}</h1>
+              <div class="max-2xl:flex max-2xl:justify-center font-bold text-xl xl-max:text-lg">
+                <div class="flex flex-row">
+                  <h6>{{ Country_name }}, </h6>
+                  <h6> {{ City }}</h6>
+                </div>
+              </div>
+              <h6 class="font-bold max-2xl:pl-4">Wind speed: {{ cloud_speed }} km/hour</h6>
             </div>
-            <h6 class="font-bold mb-8">Wind speed: {{ cloud_speed }} km/hour</h6>
           </div>
         </div>
       </div>
@@ -96,6 +100,7 @@ export default {
       this.City = this.City.trim();
       if (this.City.length > 0) {
         this.counter += 1;
+        console.log(this.City);
         fetch(apiLink + `${this.City}&appid=ef63fae71b11f8ef4dd1fd8a5b7a5c87`)
           .then(response => {
             if (!response.ok) {
@@ -116,7 +121,7 @@ export default {
           });
         console.log(this.DateFunction());
       } else {
-        this.counter = null;
+        this.counter -= 1;
       }
     }
   }
